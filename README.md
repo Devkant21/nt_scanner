@@ -1,2 +1,3 @@
 Network Scanner
 
+**Network Scan** conducts a network scan on a specified target IP address. It utilizes the scapy module for crafting and sending packets. First, it sends an ICMP echo request (ping) to determine if the target is online. If online, it scans common TCP ports using SYN packets and identifies open ports. For each port, it sends a TCP SYN packet and waits for a response. If a response is received and it has a TCP layer with SYN-ACK flags, it identifies the port as open. The program reports results and errors accordingly, providing a simple yet effective network scanning tool.
